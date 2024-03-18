@@ -1,16 +1,4 @@
-<?php 
-if(isset($_POST['submit'])){ 
-$dbconn=mysqli_connect("mysql","root","","schooldb"); // Database connetion 
-// inserting in Database 
-$firstname=$_POST['firstname']; 
-$lastname=$_POST['lastname']; 
-$regno=$_POST['regno']; 
 
-$sql="INSERT INTO tbl_student SET firstname='$firstname',  
-lastname='$lastname',regno='$regno'"; 
-$quer =mysqli_query($dbconn,$sql); 
-header("location:table.php"); 
-} ?> 
 <!DOCTYPE html> <html> <head>  <title> Form to Register</title> 
 <body>
 <style>
